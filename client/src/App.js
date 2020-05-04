@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/common/Navbar/Navbar';
 import Home from './components/views/Home/Home';
 import About from './components/views/About/About';
+import ContactState from './context/contact/ContactState';
 import './App.css';
 
 const App = () => {
   return (
+    <ContactState>
     <Router>
       <Fragment>
         <Navbar />
@@ -18,6 +20,7 @@ const App = () => {
         </div>
       </Fragment>
     </Router>
+  </ContactState>
   );
 };
 
