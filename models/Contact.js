@@ -13,12 +13,15 @@ const ContactSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  phone: {
+  number: {
+    type: String
+  },
+  birthday: {
     type: String
   },
   type: {
     type: String,
-    default: 'personal'
+    default: 'private'
   },
   date: {
     type: Date,
