@@ -5,6 +5,7 @@ import contactReducer from './contactReducer';
 import {
   ADD_CONTACT,
   DELETE_CONTACT,
+  SET_CURRENT,
 } from '../actions/actionTypes';
 
 const ContactState = props => {
@@ -34,7 +35,8 @@ const ContactState = props => {
         birthday: '27.12.1993',
         type: 'commercial'
       }
-    ]
+    ],
+    current: null
   };
 
   const [state, dispatch] = useReducer(contactReducer, initialState);
@@ -47,13 +49,19 @@ const ContactState = props => {
   const deleteContact = id => {
     dispatch({ type: DELETE_CONTACT, payload: id });
   };
-
+  
+  const setCurrent = contact => {
+    dispatch({ type: SET_CURRENT, payload: contact });
+  };
+ 
   return (
     <ContactContext.Provider
       value={{
         contacts: state.contacts,
+        current: state.current,
         addContact,
-        deleteContact
+        deleteContact,
+        setCurrent,
       }}
     >
       {props.children}
