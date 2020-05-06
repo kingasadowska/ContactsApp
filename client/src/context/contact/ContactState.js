@@ -6,6 +6,7 @@ import {
   ADD_CONTACT,
   DELETE_CONTACT,
   SET_CURRENT,
+  UPDATE_CONTACT
 } from '../actions/actionTypes';
 
 const ContactState = props => {
@@ -54,6 +55,10 @@ const ContactState = props => {
     dispatch({ type: SET_CURRENT, payload: contact });
   };
  
+  const updateContact = contact => {
+    dispatch({ type: UPDATE_CONTACT, payload: contact });
+  };
+
   return (
     <ContactContext.Provider
       value={{
@@ -62,6 +67,7 @@ const ContactState = props => {
         addContact,
         deleteContact,
         setCurrent,
+        updateContact
       }}
     >
       {props.children}
