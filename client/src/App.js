@@ -4,6 +4,7 @@ import Navbar from './components/common/Navbar/Navbar';
 import Home from './components/views/Home/Home';
 import About from './components/views/About/About';
 import ContactState from './context/contact/ContactState';
+import Login from './components/auth/Login';
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />
+            <Route exact path='/login' component={Login} />
           </Switch>
         </div>
       </Fragment>

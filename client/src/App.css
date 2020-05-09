@@ -331,10 +331,10 @@ button {
 }
 
 .form-container {
-	max-width: 500px;
-	margin: 2rem auto;
+	max-width: 450px;
+	margin: 1rem auto;
 	overflow: hidden;
-	padding: 0 2rem;
+	padding: 0 1rem;
 }
 
 .form-container h1,
