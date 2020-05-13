@@ -7,7 +7,8 @@ import {
   REGISTER_FAIL,
   CLEAR_ERRORS,
   LOGIN_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  LOGOUT
 } from '../actions/actionTypes';
 
 const AuthState = props => {
@@ -69,7 +70,7 @@ const AuthState = props => {
     }
   };
  
-  const logout = () => console.log('logout');
+  const logout = () => dispatch({ type: LOGOUT });
  
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
  
