@@ -9,13 +9,8 @@ import Register from './components/auth/Register';
 import AuthState from './context/auth/AuthState';
 import Alerts from './components/common/Alerts/Alerts';
 import AlertState from './context/alert/AlertState';
-import setAuthToken from './utils/setAuthToken';
 import PrivateRoute from './components/routing/PrivateRoute';
 import './App.css';
-
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
-}
 
 const App = () => {
   return (

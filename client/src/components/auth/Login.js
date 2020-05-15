@@ -55,6 +55,7 @@ const Login = (props) => {
         <div className='form-group'>
           <label htmlFor='password'>Password</label>
           <input
+            id='email'
             type='password'
             name='password'
             value={password}
@@ -62,6 +63,7 @@ const Login = (props) => {
           />
         </div>
         <input
+          id='email'
           type='submit'
           value='Login'
           className='btn btn-primary btn-block'
